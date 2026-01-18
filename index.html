@@ -29,6 +29,7 @@
                 <li><a href="#home" class="active" data-i18n="nav_home">Home</a></li>
                 <li><a href="#about" data-i18n="nav_about">About Me</a></li>
                 <li><a href="#articles" data-i18n="nav_articles">Publications</a></li>
+                <li><a href="#blog" data-i18n="nav_blog">Research Log</a></li>
                 <li><a href="#collabs" data-i18n="nav_collabs">Career</a></li>
             </ul>
         </nav>
@@ -43,9 +44,10 @@
         <h1 data-i18n="hero_title">David Ochoa Resendiz</h1>
         <p data-i18n="hero_subtitle">PhD Researcher | Computational Chemistry | Data Science</p>
         <div class="hero-btns">
-            <a href="#about" class="cta-btn" data-i18n="hero_cta">Learn More</a>
+            <a href="#articles" class="cta-btn" data-i18n="hero_cta">View Publications</a>
             <a href="mailto:ochoadr@gmail.com" class="cta-btn"
-                style="margin-left: 1rem; border-color: white; color: white;" data-i18n="contact_btn">Contact Me</a>
+                style="margin-left: 1rem; border-color: rgba(255,255,255,0.3); color: white;"
+                data-i18n="contact_btn">Contact Me</a>
         </div>
     </section>
 
@@ -58,17 +60,31 @@
         </div>
         <div class="about-container">
             <div class="about-image">
-                <div
-                    style="width: 100%; height: 400px; background: linear-gradient(45deg, #1a1f2e, #2d3748); border-radius: 4px; display: flex; align-items: center; justify-content: center; border: 1px solid rgba(255,255,255,0.05);">
-                    <i class="fas fa-chess-knight" style="font-size: 5rem; color: #a0aec0;"></i>
+                <div class="about-img-container">
+                    <img src="images/david_profile.jpg" alt="David Ochoa Resendiz" class="floating-img">
                 </div>
             </div>
             <div class="about-text">
                 <h3 data-i18n="about_role">Professional Summary</h3>
                 <p data-i18n="about_text_1">I have led high-performance computing projects (Gaussian, ORCA, Molpro) and
                     published 6 international articles. Solid competencies in Python/R, data analysis (NumPy, SciPy,
-                    Matplotlib), and pipeline design. I also have extensive teaching experience in mathematics and
-                    programming with >95% satisfaction.</p>
+                    Matplotlib), and pipeline design.</p>
+
+                <!-- New Stats Grid -->
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <span class="stat-number">6</span>
+                        <span class="stat-label" data-i18n="stat_articles">Indexed Articles</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">9+</span>
+                        <span class="stat-label" data-i18n="stat_exp">Years R&D</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">PhD</span>
+                        <span class="stat-label" data-i18n="stat_phd">Chemical Sciences</span>
+                    </div>
+                </div>
 
                 <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; color: var(--accent-gold);" data-i18n="edu_title">
                     Education</h4>
@@ -86,10 +102,30 @@
                         (2016-2018)</li>
                 </ul>
 
-                <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; color: var(--accent-gold);"
-                    data-i18n="skills_title">Technical Skills</h4>
-                <p style="font-size: 0.9rem;" data-i18n="skills_text">Python, R, MySQL, Bash, Git, TensorFlow,
-                    Scikit-learn, LaTeX, C++, Gaussian, ORCA.</p>
+                <h4 style="margin-top: 1.5rem; margin-bottom: 1rem; color: var(--accent-gold);"
+                    data-i18n="skills_title">Technical Proficiency</h4>
+
+                <div class="skills-wrapper">
+                    <div class="skill-category">
+                        <h5 data-i18n="skill_cat_sci">Scientific Computing</h5>
+                        <div class="skill-tags">
+                            <span>Gaussian</span> <span>ORCA</span> <span>MolPro</span> <span>AutoDock</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h5 data-i18n="skill_cat_data">Data Science</h5>
+                        <div class="skill-tags">
+                            <span>Python</span> <span>R</span> <span>NumPy</span> <span>Pandas</span>
+                            <span>Matplotlib</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h5 data-i18n="skill_cat_dev">Development</h5>
+                        <div class="skill-tags">
+                            <span>Bash/Shell</span> <span>Git</span> <span>LaTeX</span> <span>SQL</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -151,6 +187,39 @@
                     <h3>Evidence of halogen bonds in clathrate cages</h3>
                     <p data-i18n="art_6_desc">Theoretical characterization of interactions.</p>
                 </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Research Log / Blog Section -->
+    <section id="blog">
+        <div class="section-title">
+            <h2 data-i18n="blog_title">Research Log</h2>
+            <p data-i18n="blog_subtitle">Latest insights, methodology updates, and community news.</p>
+        </div>
+        <div class="blog-grid">
+            <!-- Featured Log Entry -->
+            <article class="blog-card featured">
+                <div class="blog-date">Jan 18, 2026</div>
+                <h3 data-i18n="blog_1_title">Optimizing Basis Sets for Large Scale Systems</h3>
+                <p data-i18n="blog_1_desc">A look into the trade-offs between accuracy and computational cost when
+                    dealing with macromolecules...</p>
+                <a href="#" class="read-more">Read Entry <i class="fas fa-arrow-right"></i></a>
+            </article>
+            <!-- Secondary Entries -->
+            <article class="blog-card">
+                <div class="blog-date">Dec 12, 2025</div>
+                <h3 data-i18n="blog_2_title">Python vs. Fortran in 2026</h3>
+                <p data-i18n="blog_2_desc">Why modern Python libraries are closing the gap in high-performance computing
+                    pipelines.</p>
+                <a href="#" class="read-more">Read Entry <i class="fas fa-arrow-right"></i></a>
+            </article>
+            <article class="blog-card">
+                <div class="blog-date">Nov 30, 2025</div>
+                <h3 data-i18n="blog_3_title">Chess & Strategy</h3>
+                <p data-i18n="blog_3_desc">How competitive chess influences problem-solving in computational chemistry.
+                </p>
+                <a href="#" class="read-more">Read Entry <i class="fas fa-arrow-right"></i></a>
             </article>
         </div>
     </section>

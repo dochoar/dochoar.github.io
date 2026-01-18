@@ -36,26 +36,44 @@ const translations = {
         interests_title: "Personal Interests",
         interests_desc: "FIDE Arena International Master (Chess). Science Content Creator \"Compendio de Clases\" (22k+ subs).",
         footer_credits: "Design by Antigravity.",
-        lang_btn: "ESPAÑOL"
+        lang_btn: "ESPAÑOL",
+        // New Keys
+        stat_articles: "Indexed Articles",
+        stat_exp: "Years R&D",
+        stat_phd: "Chemical Sciences",
+        skill_cat_sci: "Scientific Computing",
+        skill_cat_data: "Data Science",
+        skill_cat_dev: "Development",
+        // Blog Keys
+        nav_blog: "Research Log",
+        blog_title: "Research Log",
+        blog_subtitle: "Latest insights, methodology updates, and community news.",
+        blog_1_title: "Optimizing Basis Sets for Large Scale Systems",
+        blog_1_desc: "A look into the trade-offs between accuracy and computational cost when dealing with macromolecules...",
+        blog_2_title: "Python vs. Fortran in 2026",
+        blog_2_desc: "Why modern Python libraries are closing the gap in high-performance computing pipelines.",
+        blog_3_title: "Chess & Strategy",
+        blog_3_desc: "How competitive chess influences problem-solving in computational chemistry."
     },
     es: {
         nav_home: "Inicio",
         nav_about: "Acerca de Mí",
         nav_articles: "Publicaciones",
+        nav_blog: "Bitácora",
         nav_collabs: "Trayectoria",
         hero_title: "David Ochoa Resendiz",
         hero_subtitle: "Doctor en Ciencias | Termoquímica Computacional | Ciencia de Datos",
-        hero_cta: "Conocer Más",
+        hero_cta: "Ver Publicaciones", /* Changed from Conocer Más */
         contact_btn: "Contactar",
         about_title: "Acerca de Mí",
         about_subtitle: "Doctor en Ciencias con 9+ años en termoquímica computacional y modelado ab initio.",
         about_role: "Resumen Profesional",
-        about_text_1: "He liderado proyectos de alto desempeño en supercómputo (Gaussian, ORCA, Molpro) y publicado 6 artículos internacionales. Competencias sólidas en Python/R, análisis de datos (NumPy, SciPy, Matplotlib) y diseño de pipelines. Amplia experiencia docente en matemáticas y programación con >95% de satisfacción. Inglés B2 y estancia en la Universidad de Oxford.",
+        about_text_1: "He liderado proyectos de alto desempeño en supercómputo (Gaussian, ORCA, Molpro) y publicado 6 artículos internacionales. Competencias sólidas en Python/R, análisis de datos (NumPy, SciPy, Matplotlib) y diseño de pipelines. Inglés B2 y estancia en la Universidad de Oxford.",
         edu_title: "Educación",
         edu_phd: "Doctorado en Ciencias Químicas",
         edu_master_ai: "Maestría en Inteligencia Artificial",
         edu_master_eng: "Maestría en Ciencias de la Ingeniería",
-        skills_title: "Habilidades Técnicas",
+        skills_title: "Dominio Técnico",
         skills_text: "Python, R, MySQL, Bash, Git, UNIX, TensorFlow, Scikit-learn, LaTeX, C++, Gaussian, ORCA, MolPro, Vibe Coding.",
         articles_title: "Publicaciones Científicas",
         articles_subtitle: "Investigación en revistas indexadas internacionales.",
@@ -65,6 +83,15 @@ const translations = {
         art_4_desc: "Estudio en jaulas de hidrato de clatrato de cloro.",
         art_5_desc: "Una perspectiva desde el espacio real.",
         art_6_desc: "Caracterización teórica de interacciones.",
+        // Blog Keys
+        blog_title: "Bitácora de Investigación",
+        blog_subtitle: "Últimas ideas, actualizaciones metodológicas y noticias de la comunidad.",
+        blog_1_title: "Optimizando Conjuntos de Base para Sistemas a Gran Escala",
+        blog_1_desc: "Un vistazo a las compensaciones entre precisión y costo computacional al tratar con macromoléculas...",
+        blog_2_title: "Python vs. Fortran en 2026",
+        blog_2_desc: "Por qué las bibliotecas modernas de Python están cerrando la brecha en pipelines de alto rendimiento.",
+        blog_3_title: "Ajedrez y Estrategia",
+        blog_3_desc: "Cómo el ajedrez competitivo influye en la resolución de problemas en química computacional.",
         collabs_title: "Trayectoria e Intereses",
         collabs_subtitle: "Dirección de tesis, estancias y proyectos personales.",
         thesis_title: "Dirección de Tesis",
@@ -74,7 +101,14 @@ const translations = {
         interests_title: "Intereses Personales",
         interests_desc: "Maestro Internacional FIDE Arena (Ajedrez). Creador de contenido científico \"Compendio de Clases\" (22k+ subs).",
         footer_credits: "Diseño por Antigravity.",
-        lang_btn: "ENGLISH"
+        lang_btn: "ENGLISH",
+        // New Keys
+        stat_articles: "Artículos Indexados",
+        stat_exp: "Años I+D",
+        stat_phd: "Ciencias Químicas",
+        skill_cat_sci: "Cómputo Científico",
+        skill_cat_data: "Ciencia de Datos",
+        skill_cat_dev: "Desarrollo"
     }
 };
 
