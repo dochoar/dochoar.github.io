@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Log | David Ochoa Resendiz</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Outfit:wght@400;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Adjust header for non-home page */
+        header {
+            position: sticky;
+            top: 0;
+            background: rgba(10, 14, 23, 0.95);
+            backdrop-filter: blur(10px);
+        }
+
+        .hero-blog {
+            padding-top: 140px;
+            padding-bottom: 40px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="images/logo_v2.png" alt="David Ochoa Logo"></a>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html#home" data-i18n="nav_home">Home</a></li>
+                <li><a href="index.html#about" data-i18n="nav_about">About Me</a></li>
+                <li><a href="index.html#articles" data-i18n="nav_articles">Publications</a></li>
+                <li><a href="#" class="active" data-i18n="nav_blog">Research Log</a></li>
+                <li><a href="index.html#collabs" data-i18n="nav_collabs">Career</a></li>
+            </ul>
+        </nav>
+        <button id="lang-toggle" class="lang-btn">ESPAÑOL</button>
+        <div class="mobile-menu-btn">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+
+    <!-- Blog Hero -->
+    <section class="hero-blog">
+        <div class="section-title">
+            <h1 data-i18n="blog_title">Research Log</h1>
+            <p data-i18n="blog_subtitle">Latest insights, methodology updates, and community news.</p>
+        </div>
+    </section>
+
+    <!-- Research Log / Blog Section -->
+    <section id="blog" style="padding-top: 0;">
+        <div class="blog-grid">
+            <!-- Featured Log Entry -->
+            <article class="blog-card featured">
+                <div class="blog-date">Jan 18, 2026</div>
+                <h3 data-i18n="blog_1_title">Optimizing Basis Sets for Large Scale Systems</h3>
+                <p data-i18n="blog_1_desc">A look into the trade-offs between accuracy and computational cost when
+                    dealing with macromolecules...</p>
+                <a href="#" class="read-more">Read Entry <i class="fas fa-arrow-right"></i></a>
+            </article>
+            <!-- Secondary Entries -->
+            <article class="blog-card">
+                <div class="blog-date">Dec 12, 2025</div>
+                <h3 data-i18n="blog_2_title">Python vs. Fortran in 2026</h3>
+                <p data-i18n="blog_2_desc">Why modern Python libraries are closing the gap in high-performance computing
+                    pipelines.</p>
+                <a href="#" class="read-more">Read Entry <i class="fas fa-arrow-right"></i></a>
+            </article>
+            <article class="blog-card">
+                <div class="blog-date">Nov 30, 2025</div>
+                <h3 data-i18n="blog_3_title">Chess & Strategy</h3>
+                <p data-i18n="blog_3_desc">How competitive chess influences problem-solving in computational chemistry.
+                </p>
+                <a href="#" class="read-more">Read Entry <i class="fas fa-arrow-right"></i></a>
+            </article>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="social-links">
+            <a href="mailto:ochoadr@gmail.com" class="social-icon"><i class="fas fa-envelope"></i></a>
+            <a href="https://github.com/dochoar" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
+            <a href="https://www.researchgate.net/profile/David-Ochoa-Resendiz" target="_blank" class="social-icon"><i
+                    class="fab fa-researchgate"></i></a>
+            <a href="https://youtube.com/c/CompendiodeClases" target="_blank" class="social-icon"><i
+                    class="fab fa-youtube"></i></a>
+        </div>
+        <p>&copy; 2026 David Ochoa Resendiz. Cuernavaca, Morelos.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -44,6 +44,9 @@ const translations = {
         skill_cat_sci: "Scientific Computing",
         skill_cat_data: "Data Science",
         skill_cat_dev: "Development",
+        edu_chem_eng: "Chemical Engineering",
+        edu_chem_eng_school: "Instituto Tecnológico de Zacatepec",
+        edu_chem_eng_desc: "Graduated with Honors. Thesis: [Insert Thesis Topic]",
         // Blog Keys
         nav_blog: "Research Log",
         blog_title: "Research Log",
@@ -73,6 +76,9 @@ const translations = {
         edu_phd: "Doctorado en Ciencias Químicas",
         edu_master_ai: "Maestría en Inteligencia Artificial",
         edu_master_eng: "Maestría en Ciencias de la Ingeniería",
+        edu_chem_eng: "Ingeniería Química",
+        edu_chem_eng_school: "Instituto Tecnológico de Zacatepec",
+        edu_chem_eng_desc: "Titulado con Mención Honorífica. Tesis: [Insertar Tema de Tesis]",
         skills_title: "Dominio Técnico",
         skills_text: "Python, R, MySQL, Bash, Git, UNIX, TensorFlow, Scikit-learn, LaTeX, C++, Gaussian, ORCA, MolPro, Vibe Coding.",
         articles_title: "Publicaciones Científicas",
@@ -176,6 +182,9 @@ const sections = document.querySelectorAll('section');
 const navItems = document.querySelectorAll('nav ul li a');
 
 window.addEventListener('scroll', () => {
+    const homeSection = document.getElementById('home');
+    if (!homeSection) return;
+
     let current = '';
     sections.forEach(section => {
         const sectionTop = section.offsetTop;
