@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>David Ochoa Resendiz | Investigador & Académico</title>
+    <title>David Ochoa Resendiz | Researcher & Academic</title>
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,12 +26,13 @@
         </div>
         <nav>
             <ul class="nav-links">
-                <li><a href="#home" class="active">Inicio</a></li>
-                <li><a href="#about">Acerca de Mí</a></li>
-                <li><a href="#articles">Publicaciones</a></li>
-                <li><a href="#collabs">Trayectoria</a></li>
+                <li><a href="#home" class="active" data-i18n="nav_home">Home</a></li>
+                <li><a href="#about" data-i18n="nav_about">About Me</a></li>
+                <li><a href="#articles" data-i18n="nav_articles">Publications</a></li>
+                <li><a href="#collabs" data-i18n="nav_collabs">Career</a></li>
             </ul>
         </nav>
+        <button id="lang-toggle" class="lang-btn">ESPAÑOL</button>
         <div class="mobile-menu-btn">
             <i class="fas fa-bars"></i>
         </div>
@@ -39,35 +40,56 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <h1>David Ochoa Resendiz</h1>
-        <p>Investigador en Química Computacional & Mecánica Cuántica | BUAP & UAEM</p>
-        <a href="#about" class="cta-btn">Conocer Más</a>
+        <h1 data-i18n="hero_title">David Ochoa Resendiz</h1>
+        <p data-i18n="hero_subtitle">PhD Researcher | Computational Chemistry | Data Science</p>
+        <div class="hero-btns">
+            <a href="#about" class="cta-btn" data-i18n="hero_cta">Learn More</a>
+            <a href="mailto:ochoadr@gmail.com" class="cta-btn"
+                style="margin-left: 1rem; border-color: white; color: white;" data-i18n="contact_btn">Contact Me</a>
+        </div>
     </section>
 
     <!-- About Me -->
     <section id="about">
         <div class="section-title">
-            <h2>Acerca de Mí</h2>
-            <p>Pasión por la ciencia, rigor en la investigación.</p>
+            <h2 data-i18n="about_title">About Me</h2>
+            <p data-i18n="about_subtitle">PhD in Sciences with 9+ years in computational thermochemistry and ab initio
+                modeling.</p>
         </div>
         <div class="about-container">
             <div class="about-image">
-                <!-- Placeholder for user image, user to replace later -->
                 <div
                     style="width: 100%; height: 400px; background: linear-gradient(45deg, #1a1f2e, #2d3748); border-radius: 4px; display: flex; align-items: center; justify-content: center; border: 1px solid rgba(255,255,255,0.05);">
-                    <i class="fas fa-atom" style="font-size: 5rem; color: #a0aec0;"></i>
+                    <i class="fas fa-chess-knight" style="font-size: 5rem; color: #a0aec0;"></i>
                 </div>
             </div>
             <div class="about-text">
-                <h3>Investigador Doctoral</h3>
-                <p>Soy David Ochoa Resendiz, actualmente estudiante de doctorado en la Facultad de Ciencias Químicas de
-                    la <strong>Benemérita Universidad Autónoma de Puebla (BUAP)</strong>. Mi carrera se ha desarrollado
-                    en la intersección de la <strong>Química Computacional</strong>, la Termoquímica y la Mecánica
-                    Cuántica.</p>
-                <p>Previamente colaboré en el Centro de Investigaciones Químicas (CIQ) de la <strong>Universidad
-                        Autónoma del Estado de Morelos (UAEM)</strong> (2013-2020), donde profundicé en el estudio de
-                    predicciones termoquímicas y enlaces de halógeno. Mi enfoque actual incluye la mejora de métodos
-                    predictivos para compuestos con grupos -NO2 y el análisis de dinámicas de fotodisociación.</p>
+                <h3 data-i18n="about_role">Professional Summary</h3>
+                <p data-i18n="about_text_1">I have led high-performance computing projects (Gaussian, ORCA, Molpro) and
+                    published 6 international articles. Solid competencies in Python/R, data analysis (NumPy, SciPy,
+                    Matplotlib), and pipeline design. I also have extensive teaching experience in mathematics and
+                    programming with >95% satisfaction.</p>
+
+                <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; color: var(--accent-gold);" data-i18n="edu_title">
+                    Education</h4>
+                <ul style="list-style: none; color: var(--text-secondary);">
+                    <li style="margin-bottom: 0.5rem;"><i class="fas fa-graduation-cap"
+                            style="color: var(--accent-color); margin-right: 10px;"></i> <strong data-i18n="edu_phd">PhD
+                            in Chemical Sciences</strong> - BUAP (2021-2025)</li>
+                    <li style="margin-bottom: 0.5rem;"><i class="fas fa-brain"
+                            style="color: var(--accent-color); margin-right: 10px;"></i> <strong
+                            data-i18n="edu_master_ai">Masters in Artificial Intelligence</strong> - ITS Atlixco
+                        (Ongoing)</li>
+                    <li style="margin-bottom: 0.5rem;"><i class="fas fa-cogs"
+                            style="color: var(--accent-color); margin-right: 10px;"></i> <strong
+                            data-i18n="edu_master_eng">Masters in Engineering Sciences</strong> - IT Zacatepec
+                        (2016-2018)</li>
+                </ul>
+
+                <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; color: var(--accent-gold);"
+                    data-i18n="skills_title">Technical Skills</h4>
+                <p style="font-size: 0.9rem;" data-i18n="skills_text">Python, R, MySQL, Bash, Git, TensorFlow,
+                    Scikit-learn, LaTeX, C++, Gaussian, ORCA.</p>
             </div>
         </div>
     </section>
@@ -75,56 +97,59 @@
     <!-- Published Articles -->
     <section id="articles">
         <div class="section-title">
-            <h2>Publicaciones Destacadas</h2>
-            <p>Contribuciones al avance del conocimiento científico.</p>
+            <h2 data-i18n="articles_title">Scientific Publications</h2>
+            <p data-i18n="articles_subtitle">Research in indexed international journals.</p>
         </div>
         <div class="articles-grid">
             <!-- Article 1 -->
             <article class="article-card">
-                <div class="article-image"
-                    style="background: #1e293b; display: flex; align-items: center; justify-content: center;"><i
-                        class="fas fa-file-alt" style="font-size: 3rem; color: #475569;"></i></div>
                 <div class="article-content">
-                    <span class="article-tag">PCCP 2025</span>
-                    <h3>Photodissociation dynamics of ethyl formate</h3>
-                    <p>Estudio de radiación sincrotrón y cálculos ab initio sobre eliminación de hidrógeno y
-                        disociaciones secundarias.</p>
+                    <span class="article-tag">J. Chem. Phys. 2025</span>
+                    <h3>Specialized modification to the G4 composite method...</h3>
+                    <p data-i18n="art_1_desc">Computing formation enthalpies of nitrophenyl and nitrogen-heterocycle
+                        organic compounds.</p>
                 </div>
             </article>
             <!-- Article 2 -->
             <article class="article-card">
-                <div class="article-image"
-                    style="background: #1e293b; display: flex; align-items: center; justify-content: center;"><i
-                        class="fas fa-flask" style="font-size: 3rem; color: #475569;"></i></div>
                 <div class="article-content">
-                    <span class="article-tag">ChemPhysChem 2018</span>
-                    <h3>Halogen bonds in clathrate cages</h3>
-                    <p>Una perspectiva desde el espacio real sobre las interacciones fundamentales en jaulas de
-                        clatrato.</p>
+                    <span class="article-tag">Thermochim. Acta 2025</span>
+                    <h3>Thermochemical properties of 2- and 3-Thiophenemethanol</h3>
+                    <p data-i18n="art_2_desc">Eluding incomplete combustion issues through combining experimental and
+                        computational methodologies.</p>
                 </div>
             </article>
             <!-- Article 3 -->
             <article class="article-card">
-                <div class="article-image"
-                    style="background: #1e293b; display: flex; align-items: center; justify-content: center;"><i
-                        class="fas fa-chart-line" style="font-size: 3rem; color: #475569;"></i></div>
                 <div class="article-content">
-                    <span class="article-tag">J. Chem. Phys. 2016</span>
-                    <h3>Evidence of halogen bonds in clathrate cages</h3>
-                    <p>Caracterización teórica de interacciones de Cl2 y Br2, coautoría con FA Batista-Romero y R
-                        Hernández-Lamoneda.</p>
+                    <span class="article-tag">PCCP 2025</span>
+                    <h3>Photodissociation dynamics of ethyl formate</h3>
+                    <p data-i18n="art_3_desc">Synchrotron radiation study and ab initio calculations on hydrogen
+                        elimination.</p>
                 </div>
             </article>
             <!-- Article 4 -->
             <article class="article-card">
-                <div class="article-image"
-                    style="background: #1e293b; display: flex; align-items: center; justify-content: center;"><i
-                        class="fas fa-microscope" style="font-size: 3rem; color: #475569;"></i></div>
                 <div class="article-content">
-                    <span class="article-tag">Investigación</span>
-                    <h3>G4 Composite Method Modification</h3>
-                    <p>Mejora especializada para calcular entalpías de formación en compuestos orgánicos de nitrofenilo.
-                    </p>
+                    <span class="article-tag">J. Chem. Phys. 2022</span>
+                    <h3>Halogen bonding and rotational disorder</h3>
+                    <p data-i18n="art_4_desc">Study in chlorine clathrate hydrate cages.</p>
+                </div>
+            </article>
+            <!-- Article 5 -->
+            <article class="article-card">
+                <div class="article-content">
+                    <span class="article-tag">ChemPhysChem 2018</span>
+                    <h3>Halogen bonds in clathrate cages</h3>
+                    <p data-i18n="art_5_desc">A real space perspective.</p>
+                </div>
+            </article>
+            <!-- Article 6 -->
+            <article class="article-card">
+                <div class="article-content">
+                    <span class="article-tag">J. Chem. Phys. 2016</span>
+                    <h3>Evidence of halogen bonds in clathrate cages</h3>
+                    <p data-i18n="art_6_desc">Theoretical characterization of interactions.</p>
                 </div>
             </article>
         </div>
@@ -133,25 +158,27 @@
     <!-- Collaborations & Students -->
     <section id="collabs" style="background: var(--secondary-bg);">
         <div class="section-title">
-            <h2>Trayectoria & Colaboraciones</h2>
-            <p>Instituciones y alianzas que han marcado mi camino.</p>
+            <h2 data-i18n="collabs_title">Trajectory & Interests</h2>
+            <p data-i18n="collabs_subtitle">Supervision, Research Stays, and Personal Projects.</p>
         </div>
         <div class="collab-container">
             <div class="collab-card">
-                <div class="collab-avatar"><i class="fas fa-university"></i></div>
-                <h4>BUAP</h4>
-                <p>Estudiante de Doctorado en la Facultad de Ciencias Químicas, Puebla.</p>
+                <div class="collab-avatar"><i class="fas fa-chalkboard-teacher"></i></div>
+                <h4 data-i18n="thesis_title">Thesis Supervision</h4>
+                <p data-i18n="thesis_desc">Co-directed 3 Bachelor's theses and 1 Master's thesis at IT Zacatepec
+                    (2023-2025).</p>
             </div>
             <div class="collab-card">
-                <div class="collab-avatar"><i class="fas fa-atom"></i></div>
-                <h4>CIQ - UAEM</h4>
-                <p>Investigación en Química Cuántica y Física Molecular con Dr. Ramón Hernández Lamoneda (2013-2020).
-                </p>
+                <div class="collab-avatar"><i class="fas fa-globe-europe"></i></div>
+                <h4 data-i18n="stays_title">Research Stays</h4>
+                <p data-i18n="stays_desc"><strong>University of Oxford</strong> (2018) - Fragmentation
+                    dynamics.<br><strong>CIQ - UAEM</strong> (2014-Present) - Ab initio methodologies.</p>
             </div>
             <div class="collab-card">
-                <div class="collab-avatar"><i class="fas fa-network-wired"></i></div>
-                <h4>Áreas de Interés</h4>
-                <p>Química Computacional, Modelado Molecular, Estructura Electrónica.</p>
+                <div class="collab-avatar"><i class="fab fa-youtube"></i></div>
+                <h4 data-i18n="interests_title">Personal Interests</h4>
+                <p data-i18n="interests_desc">FIDE Arena International Master (Chess). Science Content Creator
+                    "Compendio de Clases" (22k+ subs).</p>
             </div>
         </div>
     </section>
@@ -159,12 +186,14 @@
     <!-- Footer -->
     <footer>
         <div class="social-links">
+            <a href="mailto:ochoadr@gmail.com" class="social-icon"><i class="fas fa-envelope"></i></a>
+            <a href="https://github.com/dochoar" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
             <a href="https://www.researchgate.net/profile/David-Ochoa-Resendiz" target="_blank" class="social-icon"><i
                     class="fab fa-researchgate"></i></a>
-            <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
-            <a href="#" class="social-icon"><i class="fas fa-envelope"></i></a>
+            <a href="https://youtube.com/c/CompendiodeClases" target="_blank" class="social-icon"><i
+                    class="fab fa-youtube"></i></a>
         </div>
-        <p>&copy; 2026 David Ochoa Resendiz. Diseño por Antigravity.</p>
+        <p>&copy; 2026 David Ochoa Resendiz. Cuernavaca, Morelos.</p>
     </footer>
 
     <script src="script.js"></script>
