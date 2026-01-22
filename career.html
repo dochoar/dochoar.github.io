@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>David Ochoa Resendiz | Researcher & Academic</title>
+    <title>Career | David Ochoa Resendiz</title>
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,11 +26,11 @@
         </div>
         <nav>
             <ul class="nav-links">
-                <li><a href="index.html" class="active" data-i18n="nav_home">Home</a></li>
+                <li><a href="index.html" data-i18n="nav_home">Home</a></li>
                 <li><a href="about.html" data-i18n="nav_about">About Me</a></li>
                 <li><a href="publications.html" data-i18n="nav_articles">Publications</a></li>
                 <li><a href="blog.html" data-i18n="nav_blog">Research Log</a></li>
-                <li><a href="career.html" data-i18n="nav_collabs">Career</a></li>
+                <li><a href="career.html" class="active" data-i18n="nav_collabs">Career</a></li>
             </ul>
         </nav>
         <button id="lang-toggle" class="lang-btn">ESPAÑOL</button>
@@ -39,15 +39,31 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <h1 data-i18n="hero_title">David Ochoa Resendiz</h1>
-        <p data-i18n="hero_subtitle">PhD Researcher | Computational Chemistry | Data Science</p>
-        <div class="hero-btns">
-            <a href="publications.html" class="cta-btn" data-i18n="hero_cta">View Publications</a>
-            <a href="mailto:ochoadr@gmail.com" class="cta-btn"
-                style="margin-left: 1rem; border-color: rgba(255,255,255,0.3); color: white;"
-                data-i18n="contact_btn">Contact Me</a>
+    <!-- Collaborations & Students -->
+    <section id="collabs" class="page-section">
+        <div class="section-title">
+            <h2 data-i18n="collabs_title">Trajectory & Interests</h2>
+            <p data-i18n="collabs_subtitle">Supervision, Research Stays, and Personal Projects.</p>
+        </div>
+        <div class="collab-container">
+            <div class="collab-card">
+                <div class="collab-avatar"><i class="fas fa-chalkboard-teacher"></i></div>
+                <h4 data-i18n="thesis_title">Thesis Supervision</h4>
+                <p data-i18n="thesis_desc">Co-directed 3 Bachelor's theses and 1 Master's thesis at IT Zacatepec
+                    (2023-2025).</p>
+            </div>
+            <div class="collab-card">
+                <div class="collab-avatar"><i class="fas fa-globe-europe"></i></div>
+                <h4 data-i18n="stays_title">Research Stays</h4>
+                <p data-i18n="stays_desc"><strong>University of Oxford</strong> (2018) - Fragmentation
+                    dynamics.<br><strong>CIQ - UAEM</strong> (2014-Present) - Ab initio methodologies.</p>
+            </div>
+            <div class="collab-card">
+                <div class="collab-avatar"><i class="fab fa-youtube"></i></div>
+                <h4 data-i18n="interests_title">Personal Interests</h4>
+                <p data-i18n="interests_desc">FIDE Arena International Master (Chess). Science Content Creator
+                    "Compendio de Clases" (22k+ subs).</p>
+            </div>
         </div>
     </section>
 

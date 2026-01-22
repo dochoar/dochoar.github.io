@@ -7,7 +7,7 @@ const translations = {
         nav_collabs: "Career",
         hero_title: "David Ochoa Resendiz",
         hero_subtitle: "PhD Researcher | Computational Chemistry | Data Science",
-        hero_cta: "Learn More",
+        hero_cta: "View Publications",
         contact_btn: "Contact Me",
         about_title: "About Me",
         about_subtitle: "PhD in Sciences with 9+ years in computational thermochemistry and ab initio modeling.",
@@ -177,54 +177,16 @@ document.querySelectorAll('.nav-links a').forEach(link => {
     });
 });
 
-// Scroll Highlight Integration
-const sections = document.querySelectorAll('section');
-const navItems = document.querySelectorAll('nav ul li a');
+// Set active navigation based on current page
+document.addEventListener('DOMContentLoaded', () => {
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    const navItems = document.querySelectorAll('nav ul li a');
 
-window.addEventListener('scroll', () => {
-    const homeSection = document.getElementById('home');
-    if (!homeSection) return;
-
-    let current = '';
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        if (pageYOffset >= (sectionTop - sectionHeight / 3)) {
-            current = section.getAttribute('id');
-        }
-    });
-
-    navItems.forEach(a => {
-        a.classList.remove('active');
-        if (a.getAttribute('href').includes(current)) {
-            a.classList.add('active');
+    navItems.forEach(link => {
+        link.classList.remove('active');
+        const href = link.getAttribute('href');
+        if (href === currentPage || (href === 'index.html' && currentPage === '')) {
+            link.classList.add('active');
         }
     });
 });
-
-// Reveal Animations on Scroll
-const revealElements = document.querySelectorAll('.hero h1, .hero p, .cta-btn, .section-title, .about-container, .article-card, .collab-card');
-
-const revealOnScroll = () => {
-    const triggerBottom = window.innerHeight / 5 * 4;
-
-    revealElements.forEach(box => {
-        const boxTop = box.getBoundingClientRect().top;
-
-        if (boxTop < triggerBottom) {
-            box.style.opacity = '1';
-            box.style.transform = 'translateY(0)';
-        }
-    });
-};
-
-// Initial style for reveal elements to allow animation
-revealElements.forEach(el => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(20px)';
-    el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
-});
-
-window.addEventListener('scroll', revealOnScroll);
-// Trigger once on load
-revealOnScroll();

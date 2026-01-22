@@ -136,6 +136,12 @@ section {
     position: relative;
 }
 
+/* Page Section for standalone pages */
+.page-section {
+    padding-top: 120px;
+    min-height: calc(100vh - 200px);
+}
+
 .section-title {
     text-align: center;
     margin-bottom: 4rem;

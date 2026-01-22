@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me | David Ochoa Resendiz</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Outfit:wght@400;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="images/logo_v2.png" alt="David Ochoa Logo">
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+                <li><a href="about.html" class="active" data-i18n="nav_about">About Me</a></li>
+                <li><a href="publications.html" data-i18n="nav_articles">Publications</a></li>
+                <li><a href="blog.html" data-i18n="nav_blog">Research Log</a></li>
+                <li><a href="career.html" data-i18n="nav_collabs">Career</a></li>
+            </ul>
+        </nav>
+        <button id="lang-toggle" class="lang-btn">ESPAÑOL</button>
+        <div class="mobile-menu-btn">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+
+    <!-- About Me -->
+    <section id="about" class="page-section">
+        <div class="section-title">
+            <h2 data-i18n="about_title">About Me</h2>
+            <p data-i18n="about_subtitle">PhD in Sciences with 9+ years in computational thermochemistry and ab initio
+                modeling.</p>
+        </div>
+        <div class="about-container">
+            <div class="about-image">
+                <div class="about-img-container">
+                    <img src="images/david_profile.jpg" alt="David Ochoa Resendiz" class="floating-img">
+                </div>
+            </div>
+            <div class="about-text">
+                <h3 data-i18n="about_role">Professional Summary</h3>
+                <p data-i18n="about_text_1">I have led high-performance computing projects (Gaussian, ORCA, Molpro) and
+                    published 6 international articles. Solid competencies in Python/R, data analysis (NumPy, SciPy,
+                    Matplotlib), and pipeline design.</p>
+
+                <!-- New Stats Grid -->
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <span class="stat-number">6</span>
+                        <span class="stat-label" data-i18n="stat_articles">Indexed Articles</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">9+</span>
+                        <span class="stat-label" data-i18n="stat_exp">Years R&D</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">PhD</span>
+                        <span class="stat-label" data-i18n="stat_phd">Chemical Sciences</span>
+                    </div>
+                </div>
+
+                <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; color: var(--accent-gold);" data-i18n="edu_title">
+                    Education</h4>
+                <ul style="list-style: none; color: var(--text-secondary);">
+                    <li style="margin-bottom: 0.5rem;"><i class="fas fa-graduation-cap"
+                            style="color: var(--accent-color); margin-right: 10px;"></i> <strong data-i18n="edu_phd">PhD
+                            in Chemical Sciences</strong> - BUAP (2021-2025)</li>
+                    <li style="margin-bottom: 0.5rem;"><i class="fas fa-brain"
+                            style="color: var(--accent-color); margin-right: 10px;"></i> <strong
+                            data-i18n="edu_master_ai">Masters in Artificial Intelligence</strong> - ITS Atlixco
+                        (Ongoing)</li>
+                    <li style="margin-bottom: 0.5rem;"><i class="fas fa-cogs"
+                            style="color: var(--accent-color); margin-right: 10px;"></i> <strong
+                            data-i18n="edu_master_eng">Masters in Engineering Sciences</strong> - IT Zacatepec
+                        (2016-2018)</li>
+                    <li style="margin-bottom: 0.5rem;"><i class="fas fa-flask"
+                            style="color: var(--accent-color); margin-right: 10px;"></i> <strong
+                            data-i18n="edu_chem_eng">Chemical Engineering</strong> - <span
+                            data-i18n="edu_chem_eng_school">Instituto
+                            Tecnológico de Zacatepec</span><br><span
+                            style="margin-left: 28px; display: block; color: var(--text-secondary); margin-top: 5px;"
+                            data-i18n="edu_chem_eng_desc">Graduated with Honors...</span></li>
+                </ul>
+
+                <h4 style="margin-top: 1.5rem; margin-bottom: 1rem; color: var(--accent-gold);"
+                    data-i18n="skills_title">Technical Proficiency</h4>
+
+                <div class="skills-wrapper">
+                    <div class="skill-category">
+                        <h5 data-i18n="skill_cat_sci">Scientific Computing</h5>
+                        <div class="skill-tags">
+                            <span>Gaussian</span> <span>ORCA</span> <span>MolPro</span> <span>AutoDock</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h5 data-i18n="skill_cat_data">Data Science</h5>
+                        <div class="skill-tags">
+                            <span>Python</span> <span>R</span> <span>NumPy</span> <span>Pandas</span>
+                            <span>Matplotlib</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h5 data-i18n="skill_cat_dev">Development</h5>
+                        <div class="skill-tags">
+                            <span>Bash/Shell</span> <span>Git</span> <span>LaTeX</span> <span>SQL</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="social-links">
+            <a href="mailto:ochoadr@gmail.com" class="social-icon"><i class="fas fa-envelope"></i></a>
+            <a href="https://github.com/dochoar" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
+            <a href="https://www.researchgate.net/profile/David-Ochoa-Resendiz" target="_blank" class="social-icon"><i
+                    class="fab fa-researchgate"></i></a>
+            <a href="https://youtube.com/c/CompendiodeClases" target="_blank" class="social-icon"><i
+                    class="fab fa-youtube"></i></a>
+        </div>
+        <p>&copy; 2026 David Ochoa Resendiz. Cuernavaca, Morelos.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
