@@ -15,6 +15,94 @@
     <link rel="stylesheet" href="style.css">
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .article-card {
+            border-left: 3px solid var(--accent-color);
+            transition: border-color 0.3s, transform 0.3s;
+        }
+
+        .article-card:hover {
+            border-color: var(--accent-gold);
+            transform: translateY(-4px);
+        }
+
+        .article-authors {
+            font-size: 0.82rem;
+            color: var(--text-secondary);
+            margin-bottom: 0.5rem;
+            font-style: italic;
+        }
+
+        .article-authors strong {
+            color: var(--accent-gold);
+            font-style: normal;
+        }
+
+        .article-meta {
+            display: flex;
+            gap: 0.75rem;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-top: 0.75rem;
+        }
+
+        .article-if {
+            font-size: 0.75rem;
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 2px 8px;
+            border-radius: 20px;
+            color: var(--text-secondary);
+        }
+
+        .doi-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.78rem;
+            color: var(--accent-color);
+            text-decoration: none;
+            border: 1px solid var(--accent-color);
+            padding: 4px 12px;
+            border-radius: 20px;
+            transition: background 0.2s, color 0.2s;
+        }
+
+        .doi-btn:hover {
+            background: var(--accent-color);
+            color: #fff;
+        }
+
+        .pub-stats {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 0 auto 3rem auto;
+            max-width: 700px;
+        }
+
+        .pub-stat {
+            text-align: center;
+        }
+
+        .pub-stat .num {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--accent-color), var(--accent-gold));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .pub-stat .lbl {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+    </style>
 </head>
 
 <body>
@@ -45,56 +133,134 @@
             <h2 data-i18n="articles_title">Scientific Publications</h2>
             <p data-i18n="articles_subtitle">Research in indexed international journals.</p>
         </div>
+
+        <!-- Quick stats -->
+        <div class="pub-stats">
+            <div class="pub-stat">
+                <div class="num">6</div>
+                <div class="lbl" data-i18n="stat_articles">Indexed Articles</div>
+            </div>
+            <div class="pub-stat">
+                <div class="num">~3.1</div>
+                <div class="lbl" data-i18n="stat_avg_if">Avg. Impact Factor</div>
+            </div>
+            <div class="pub-stat">
+                <div class="num">3</div>
+                <div class="lbl" data-i18n="stat_journals">Journals</div>
+            </div>
+        </div>
+
         <div class="articles-grid">
             <!-- Article 1 -->
             <article class="article-card">
                 <div class="article-content">
-                    <span class="article-tag">J. Chem. Phys. 2025</span>
-                    <h3>Specialized modification to the G4 composite method...</h3>
+                    <span class="article-tag">J. Chem. Phys. · 2025</span>
+                    <h3>Specialized modification to the G4 composite method for computing formation enthalpies of
+                        nitrophenyl and nitrogen-heterocycle organic compounds</h3>
+                    <p class="article-authors"><strong>D. Ochoa-Resendiz</strong>, J. M. Solano-Altamirano, J.
+                        Sandoval-Lira, J. M. Hernández-Pérez.</p>
                     <p data-i18n="art_1_desc">Computing formation enthalpies of nitrophenyl and nitrogen-heterocycle
-                        organic compounds.</p>
+                        organic compounds using a specialized modification of the G4 composite method.</p>
+                    <div class="article-meta">
+                        <span class="article-if">IF: 3.1</span>
+                        <a href="https://doi.org/10.1063/5.0264222" target="_blank" class="doi-btn">
+                            <i class="fas fa-external-link-alt"></i> DOI
+                        </a>
+                    </div>
                 </div>
             </article>
+
             <!-- Article 2 -->
             <article class="article-card">
                 <div class="article-content">
-                    <span class="article-tag">Thermochim. Acta 2025</span>
-                    <h3>Thermochemical properties of 2- and 3-Thiophenemethanol</h3>
-                    <p data-i18n="art_2_desc">Eluding incomplete combustion issues through combining experimental and
-                        computational methodologies.</p>
+                    <span class="article-tag">Thermochim. Acta · 2025</span>
+                    <h3>The thermochemical properties of 2- and 3-Thiophenemethanol: eluding incomplete combustion
+                        issues through combining experimental and computational methodologies</h3>
+                    <p class="article-authors">F. Ramos, <strong>D. Ochoa-Resendiz</strong>, E. A. Camarillo, J. M.
+                        Hernández-Pérez, H. Flores, J. M. Solano-Altamirano.</p>
+                    <p data-i18n="art_2_desc">Combining experimental calorimetry and ab initio methods to determine
+                        thermochemical properties of thiophenemethanol isomers.</p>
+                    <div class="article-meta">
+                        <span class="article-if">IF: 3.1</span>
+                        <a href="https://doi.org/10.1016/j.tca.2025.180034" target="_blank" class="doi-btn">
+                            <i class="fas fa-external-link-alt"></i> DOI
+                        </a>
+                    </div>
                 </div>
             </article>
+
             <!-- Article 3 -->
             <article class="article-card">
                 <div class="article-content">
-                    <span class="article-tag">PCCP 2025</span>
-                    <h3>Photodissociation dynamics of ethyl formate</h3>
-                    <p data-i18n="art_3_desc">Synchrotron radiation study and ab initio calculations on hydrogen
-                        elimination.</p>
+                    <span class="article-tag">Phys. Chem. Chem. Phys. · 2025</span>
+                    <h3>Photodissociation dynamics of ethyl formate at 193 nm based on synchrotron radiation and ab
+                        initio calculations: hydrogen elimination and secondary dissociations</h3>
+                    <p class="article-authors">O. Domínguez-Flores, R. Navarro-Severiano, <strong>D.
+                            Ochoa-Resendiz</strong>, O. Quiroz-Cardoso, A. Rodríguez-Hernández, J. Porcayo-Calderón, F.
+                        J. Hernández-Campos, S.-H. Lee, R. Hernández-Lamoneda, A. Quinto-Hernández.</p>
+                    <p data-i18n="art_3_desc">Synchrotron radiation and ab initio study of ethyl formate
+                        photodissociation at 193 nm — hydrogen elimination and secondary dissociation pathways.</p>
+                    <div class="article-meta">
+                        <span class="article-if">IF: 2.9</span>
+                        <a href="https://pubs.rsc.org/en/content/articlelanding/2025/cp/d4cp04830j" target="_blank"
+                            class="doi-btn">
+                            <i class="fas fa-external-link-alt"></i> View Article
+                        </a>
+                    </div>
                 </div>
             </article>
+
             <!-- Article 4 -->
             <article class="article-card">
                 <div class="article-content">
-                    <span class="article-tag">J. Chem. Phys. 2022</span>
-                    <h3>Halogen bonding and rotational disorder</h3>
-                    <p data-i18n="art_4_desc">Study in chlorine clathrate hydrate cages.</p>
+                    <span class="article-tag">J. Chem. Phys. · 2022</span>
+                    <h3>Halogen bonding and rotational disorder in chlorine clathrate hydrate cages</h3>
+                    <p class="article-authors"><strong>D. Ochoa-Resendiz</strong>, A. Gamboa-Suárez, R.
+                        Hernández-Lamoneda.</p>
+                    <p data-i18n="art_4_desc">Ab initio characterization of halogen bonding and rotational disorder of
+                        Cl₂ inside clathrate hydrate cages.</p>
+                    <div class="article-meta">
+                        <span class="article-if">IF: 3.1</span>
+                        <a href="https://doi.org/10.1063/5.0082604" target="_blank" class="doi-btn">
+                            <i class="fas fa-external-link-alt"></i> DOI
+                        </a>
+                    </div>
                 </div>
             </article>
+
             <!-- Article 5 -->
             <article class="article-card">
                 <div class="article-content">
-                    <span class="article-tag">ChemPhysChem 2018</span>
-                    <h3>Halogen bonds in clathrate cages</h3>
-                    <p data-i18n="art_5_desc">A real space perspective.</p>
+                    <span class="article-tag">ChemPhysChem · 2018</span>
+                    <h3>Halogen bonds in clathrate cages: a real space perspective</h3>
+                    <p class="article-authors">J. M. Guevara-Vela, <strong>D. Ochoa-Resendiz</strong>, R.
+                        Hernández-Lamoneda, A. Costales, Á. Martín-Peñas.</p>
+                    <p data-i18n="art_5_desc">Real-space QTAIM analysis of halogen bonds formed by Cl₂ in clathrate
+                        hydrate cages.</p>
+                    <div class="article-meta">
+                        <span class="article-if">IF: 3.52</span>
+                        <a href="https://doi.org/10.1002/cphc.201800474" target="_blank" class="doi-btn">
+                            <i class="fas fa-external-link-alt"></i> DOI
+                        </a>
+                    </div>
                 </div>
             </article>
+
             <!-- Article 6 -->
             <article class="article-card">
                 <div class="article-content">
-                    <span class="article-tag">J. Chem. Phys. 2016</span>
+                    <span class="article-tag">J. Chem. Phys. · 2016</span>
                     <h3>Evidence of halogen bonds in clathrate cages</h3>
-                    <p data-i18n="art_6_desc">Theoretical characterization of interactions.</p>
+                    <p class="article-authors"><strong>D. Ochoa-Resendiz</strong>, F. A. Batista-Romero, R.
+                        Hernández-Lamoneda.</p>
+                    <p data-i18n="art_6_desc">First computational evidence demonstrating halogen bonding interactions
+                        within clathrate cages, using high-level ab initio methods.</p>
+                    <div class="article-meta">
+                        <span class="article-if">IF: 3.1</span>
+                        <a href="https://doi.org/10.1063/1.4966644" target="_blank" class="doi-btn">
+                            <i class="fas fa-external-link-alt"></i> DOI
+                        </a>
+                    </div>
                 </div>
             </article>
         </div>

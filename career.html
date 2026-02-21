@@ -13,8 +13,247 @@
         rel="stylesheet">
     <!-- Styles -->
     <link rel="stylesheet" href="style.css">
-    <!-- Font Awesome for Icons -->
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* ---- Career-specific styles ---- */
+        .career-section {
+            max-width: 1000px;
+            margin: 0 auto 4rem auto;
+        }
+
+        .career-section-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--accent-gold);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .career-section-title i {
+            color: var(--accent-color);
+            font-size: 1.2rem;
+        }
+
+        /* Collaborator cards */
+        .collabs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .collaborator-card {
+            background: var(--card-bg);
+            border: 1px solid rgba(255, 255, 255, 0.07);
+            border-radius: 12px;
+            padding: 1.5rem 1.75rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            transition: transform 0.3s, border-color 0.3s;
+            border-left: 3px solid var(--accent-color);
+        }
+
+        .collaborator-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--accent-gold);
+        }
+
+        .collaborator-role {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--accent-color);
+            font-weight: 600;
+        }
+
+        .collaborator-name {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .collaborator-uni {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        .collaborator-sni {
+            display: inline-block;
+            font-size: 0.7rem;
+            background: rgba(100, 200, 255, 0.1);
+            border: 1px solid rgba(100, 200, 255, 0.2);
+            color: var(--accent-color);
+            padding: 2px 8px;
+            border-radius: 20px;
+            margin-top: 0.25rem;
+        }
+
+        .collaborator-email {
+            font-size: 0.82rem;
+            color: var(--text-secondary);
+            text-decoration: none;
+        }
+
+        .collaborator-email:hover {
+            color: var(--accent-gold);
+        }
+
+        /* Thesis list */
+        .thesis-list {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .thesis-item {
+            background: var(--card-bg);
+            border: 1px solid rgba(255, 255, 255, 0.07);
+            border-left: 3px solid var(--accent-gold);
+            border-radius: 10px;
+            padding: 1rem 1.25rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.2rem;
+        }
+
+        .thesis-item .thesis-name {
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .thesis-item .thesis-detail {
+            font-size: 0.82rem;
+            color: var(--text-secondary);
+        }
+
+        .thesis-item .thesis-badge {
+            font-size: 0.72rem;
+            background: rgba(255, 184, 0, 0.1);
+            border: 1px solid rgba(255, 184, 0, 0.25);
+            color: var(--accent-gold);
+            padding: 2px 8px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-top: 0.2rem;
+        }
+
+        /* Awards */
+        .awards-list {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .award-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .award-item i {
+            color: var(--accent-gold);
+            margin-top: 3px;
+            flex-shrink: 0;
+        }
+
+        /* Research stays */
+        .stay-card {
+            background: var(--card-bg);
+            border: 1px solid rgba(255, 255, 255, 0.07);
+            border-radius: 12px;
+            padding: 1.25rem 1.5rem;
+            margin-bottom: 1rem;
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+        }
+
+        .stay-icon {
+            width: 42px;
+            height: 42px;
+            background: linear-gradient(135deg, var(--accent-color), var(--accent-gold));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            color: #fff;
+            font-size: 1rem;
+        }
+
+        .stay-body h4 {
+            color: var(--text-primary);
+            margin-bottom: 0.25rem;
+            font-size: 1rem;
+        }
+
+        .stay-body p {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin: 0;
+        }
+
+        /* Interests */
+        .interest-card {
+            background: var(--card-bg);
+            border: 1px solid rgba(255, 255, 255, 0.07);
+            border-radius: 12px;
+            padding: 1.25rem 1.5rem;
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            text-decoration: none;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .interest-card:hover {
+            transform: translateY(-3px);
+            border-color: var(--accent-color);
+        }
+
+        .interest-icon {
+            width: 44px;
+            height: 44px;
+            background: rgba(100, 170, 255, 0.1);
+            border: 1px solid rgba(100, 170, 255, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--accent-color);
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        .interest-body h4 {
+            color: var(--text-primary);
+            margin-bottom: 0.2rem;
+            font-size: 0.95rem;
+        }
+
+        .interest-body p {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            margin: 0;
+        }
+
+        .interests-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1rem;
+        }
+    </style>
 </head>
 
 <body>
@@ -39,32 +278,168 @@
         </div>
     </header>
 
-    <!-- Collaborations & Students -->
+    <!-- Page Title -->
     <section id="collabs" class="page-section">
         <div class="section-title">
-            <h2 data-i18n="collabs_title">Trajectory & Interests</h2>
-            <p data-i18n="collabs_subtitle">Supervision, Research Stays, and Personal Projects.</p>
+            <h2 data-i18n="collabs_title">Trajectory &amp; Career</h2>
+            <p data-i18n="collabs_subtitle">Supervision, Collaborations, Research Stays &amp; Personal Interests.</p>
         </div>
-        <div class="collab-container">
-            <div class="collab-card">
-                <div class="collab-avatar"><i class="fas fa-chalkboard-teacher"></i></div>
-                <h4 data-i18n="thesis_title">Thesis Supervision</h4>
-                <p data-i18n="thesis_desc">Co-directed 3 Bachelor's theses and 1 Master's thesis at IT Zacatepec
-                    (2023-2025).</p>
+
+        <!-- ── Active Collaborations ── -->
+        <div class="career-section">
+            <div class="career-section-title">
+                <i class="fas fa-handshake"></i>
+                <span data-i18n="collabs_active_title">Active Collaborations</span>
             </div>
-            <div class="collab-card">
-                <div class="collab-avatar"><i class="fas fa-globe-europe"></i></div>
-                <h4 data-i18n="stays_title">Research Stays</h4>
-                <p data-i18n="stays_desc"><strong>University of Oxford</strong> (2018) - Fragmentation
-                    dynamics.<br><strong>CIQ - UAEM</strong> (2014-Present) - Ab initio methodologies.</p>
-            </div>
-            <div class="collab-card">
-                <div class="collab-avatar"><i class="fab fa-youtube"></i></div>
-                <h4 data-i18n="interests_title">Personal Interests</h4>
-                <p data-i18n="interests_desc">FIDE Arena International Master (Chess). Science Content Creator
-                    "Compendio de Clases" (22k+ subs).</p>
+            <div class="collabs-grid">
+                <!-- Dr. Alfredo Quinto Hernández -->
+                <div class="collaborator-card">
+                    <div class="collaborator-role" data-i18n="collab_role_primary">Research Collaborator</div>
+                    <div class="collaborator-name">Dr. Alfredo Quinto Hernández</div>
+                    <div class="collaborator-uni">Instituto Tecnológico de Zacatepec · TecNM</div>
+                    <span class="collaborator-sni">SNI Nivel 1</span>
+                    <p style="font-size:0.82rem;color:var(--text-secondary);margin-top:0.4rem;"
+                        data-i18n="collab_quinto_desc">
+                        Photodissociation dynamics, synchrotron-radiation experiments and ab initio calculations on
+                        organic molecules.
+                    </p>
+                    <a href="mailto:alfredo.qh@itzacatepec.edu.mx" class="collaborator-email">
+                        <i class="fas fa-envelope" style="margin-right:5px;"></i>alfredo.qh@itzacatepec.edu.mx
+                    </a>
+                </div>
+                <!-- Dr. Ramón Hernández Lamoneda -->
+                <div class="collaborator-card">
+                    <div class="collaborator-role" data-i18n="collab_role_primary">Research Collaborator &amp; Mentor
+                    </div>
+                    <div class="collaborator-name">Dr. Ramón Hernández Lamoneda</div>
+                    <div class="collaborator-uni">Centro de Investigación en Química, UAEM</div>
+                    <span class="collaborator-sni">SNI Nivel 3</span>
+                    <p style="font-size:0.82rem;color:var(--text-secondary);margin-top:0.4rem;"
+                        data-i18n="collab_ramon_desc">
+                        Ab initio potential energy surfaces, halogen bonding in clathrate hydrates, and photophysical
+                        processes.
+                    </p>
+                    <a href="mailto:ramon@uaem.edu.mx" class="collaborator-email">
+                        <i class="fas fa-envelope" style="margin-right:5px;"></i>ramon@uaem.edu.mx
+                    </a>
+                </div>
             </div>
         </div>
+
+        <!-- ── Graduated Students ── -->
+        <div class="career-section">
+            <div class="career-section-title">
+                <i class="fas fa-user-graduate"></i>
+                <span data-i18n="thesis_title_full">Graduated Students &amp; Thesis Supervision</span>
+            </div>
+            <ul class="thesis-list">
+                <li class="thesis-item">
+                    <div class="thesis-name">Rodrigo Navarro Severiano</div>
+                    <div class="thesis-detail">Maestría en Ciencias de la Ingeniería · IT Zacatepec · 2023–2026
+                        (ongoing)</div>
+                    <span class="thesis-badge" data-i18n="thesis_badge_codirected">Co-directed</span>
+                </li>
+                <li class="thesis-item">
+                    <div class="thesis-name">Rodrigo Navarro Severiano</div>
+                    <div class="thesis-detail" data-i18n="thesis_rodrigo_lic">Ingeniería Química — Graduated with
+                        <em>Mención Honorífica</em> · IT Zacatepec · 2023</div>
+                    <span class="thesis-badge" data-i18n="thesis_badge_codirected">Co-directed · Honors</span>
+                </li>
+                <li class="thesis-item">
+                    <div class="thesis-name">Andrea Maritza Salgado Alvavera</div>
+                    <div class="thesis-detail">Ingeniería Química · IT Zacatepec · 2023</div>
+                    <span class="thesis-badge" data-i18n="thesis_badge_codirected">Co-directed</span>
+                </li>
+                <li class="thesis-item">
+                    <div class="thesis-name">Javier Eduardo Solórzano Ramos</div>
+                    <div class="thesis-detail">Ingeniería Química · IT Zacatepec · 2024</div>
+                    <span class="thesis-badge" data-i18n="thesis_badge_codirected">Co-directed</span>
+                </li>
+            </ul>
+        </div>
+
+        <!-- ── Research Stays ── -->
+        <div class="career-section">
+            <div class="career-section-title">
+                <i class="fas fa-globe-europe"></i>
+                <span data-i18n="stays_title">Research Stays</span>
+            </div>
+            <div class="stay-card">
+                <div class="stay-icon"><i class="fas fa-university"></i></div>
+                <div class="stay-body">
+                    <h4>University of Oxford, United Kingdom</h4>
+                    <p>Jan 2018 – May 2018 &nbsp;·&nbsp; Supervisor: Dra. Claire Vallance</p>
+                    <p style="margin-top:0.4rem;" data-i18n="stay_oxford_desc">Fragmentation dynamics via mass
+                        spectrometry and photoinduced reaction dynamics in molecules with peptide bonds. Funded by
+                        CONACYT Beca Mixta.</p>
+                </div>
+            </div>
+            <div class="stay-card">
+                <div class="stay-icon"><i class="fas fa-flask"></i></div>
+                <div class="stay-body">
+                    <h4>Centro de Investigación en Química · UAEM, México</h4>
+                    <p>Jan 2014 – Present &nbsp;·&nbsp; Supervisor: Dr. Ramón Hernández Lamoneda</p>
+                    <p style="margin-top:0.4rem;" data-i18n="stay_ciq_desc">Ab initio methodologies for potential energy
+                        surfaces, halogen bonding in clathrates, and photophysical processes in methyl acrylate.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ── Awards ── -->
+        <div class="career-section">
+            <div class="career-section-title">
+                <i class="fas fa-award"></i>
+                <span data-i18n="awards_title">Awards &amp; Distinctions</span>
+            </div>
+            <ul class="awards-list">
+                <li class="award-item"><i class="fas fa-star"></i><span data-i18n="award_1">Mención Honorífica —
+                        Bachelor's thesis oral exam · TecNM / IT Zacatepec (2015)</span></li>
+                <li class="award-item"><i class="fas fa-star"></i><span data-i18n="award_2">CONACYT Scholarship for
+                        Master's studies (2016–2018)</span></li>
+                <li class="award-item"><i class="fas fa-star"></i><span data-i18n="award_3">CONAHCYT Scholarship for
+                        Doctoral studies (2021–2025)</span></li>
+                <li class="award-item"><i class="fas fa-star"></i><span data-i18n="award_4">CONACYT Mixed Scholarship —
+                        Research stay at University of Oxford (2018)</span></li>
+                <li class="award-item"><i class="fas fa-star"></i><span data-i18n="award_5">CONACYT Scholarship for
+                        undergraduate research (2014–2015)</span></li>
+                <li class="award-item"><i class="fas fa-star"></i><span data-i18n="award_6">1st Place — III Feria de
+                        Ciencias Experimentales, Zacatepec, Morelos (2011)</span></li>
+            </ul>
+        </div>
+
+        <!-- ── Personal Interests ── -->
+        <div class="career-section">
+            <div class="career-section-title">
+                <i class="fas fa-heart"></i>
+                <span data-i18n="interests_title">Personal Interests</span>
+            </div>
+            <div class="interests-row">
+                <a href="https://ratings.fide.com/profile/5125278" target="_blank" class="interest-card">
+                    <div class="interest-icon"><i class="fas fa-chess"></i></div>
+                    <div class="interest-body">
+                        <h4 data-i18n="interest_chess_title">Chess — FIDE Arena IM</h4>
+                        <p data-i18n="interest_chess_desc">International Master FIDE Arena. View FIDE profile.</p>
+                    </div>
+                </a>
+                <a href="https://www.youtube.com/channel/UCzBqiqoEW91KidTXXp0sUdg" target="_blank"
+                    class="interest-card">
+                    <div class="interest-icon"><i class="fab fa-youtube"></i></div>
+                    <div class="interest-body">
+                        <h4 data-i18n="interest_yt_title">Compendio de Clases</h4>
+                        <p data-i18n="interest_yt_desc">Science content creator · 22k+ subscribers on YouTube.</p>
+                    </div>
+                </a>
+                <a href="https://experiencianomada.com" target="_blank" class="interest-card">
+                    <div class="interest-icon"><i class="fas fa-globe"></i></div>
+                    <div class="interest-body">
+                        <h4 data-i18n="interest_nomada_title">Revista Nómada</h4>
+                        <p data-i18n="interest_nomada_desc">Programmer &amp; editor for a travel guide built with
+                            Node.js + web scraping.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+
     </section>
 
     <!-- Footer -->
