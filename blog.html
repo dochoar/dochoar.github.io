@@ -21,13 +21,34 @@
             position: sticky;
             top: 0;
             background: rgba(10, 14, 23, 0.95);
-            backdrop-filter: blur(10px);
+            backdrop-filter: blur(12px);
         }
 
         .hero-blog {
             padding-top: 140px;
-            padding-bottom: 40px;
+            padding-bottom: 56px;
             text-align: center;
+            background:
+                radial-gradient(circle at 20% 10%, rgba(56, 178, 172, 0.18), transparent 55%),
+                radial-gradient(circle at 80% 80%, rgba(240, 230, 140, 0.08), transparent 55%);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+        }
+
+        .hero-blog .section-title h1 {
+            font-family: var(--font-heading);
+            font-size: 2.8rem;
+            letter-spacing: 0.02em;
+            margin-bottom: 0.75rem;
+            background: linear-gradient(to right, #ffffff, var(--text-secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-blog .section-title p {
+            max-width: 640px;
+            margin: 0.5rem auto 0;
+            color: var(--text-secondary);
+            font-size: 1.05rem;
         }
     </style>
 </head>

@@ -552,7 +552,7 @@ footer p {
 }
 
 .blog-card {
-    background: var(--secondary-bg);
+    background: var(--glass-bg);
     border: 1px solid var(--glass-border);
     border-radius: 8px;
     padding: 2rem;
@@ -560,17 +560,20 @@ footer p {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
 }
 
 .blog-card:hover {
-    border-color: var(--accent-gold);
-    transform: translateY(-5px);
+    border-color: var(--accent-color);
+    transform: translateY(-6px);
+    box-shadow: 0 16px 40px rgba(56, 178, 172, 0.25);
 }
 
 .blog-card.featured {
     grid-column: span 3;
-    background: linear-gradient(to right, var(--secondary-bg), rgba(240, 230, 140, 0.05));
-    border-color: rgba(240, 230, 140, 0.2);
+    background: linear-gradient(to right, rgba(11, 16, 26, 0.96), rgba(56, 178, 172, 0.1));
+    border-color: rgba(56, 178, 172, 0.4);
     display: flex;
     flex-direction: column;
     justify-content: center;
