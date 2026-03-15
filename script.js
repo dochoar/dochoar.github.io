@@ -162,7 +162,7 @@ const translations = {
     }
 };
 
-let currentLang = 'en';
+let currentLang = 'es';
 
 function updateLanguage(lang) {
     currentLang = lang;
@@ -221,7 +221,7 @@ document.querySelectorAll('.nav-links a').forEach(link => {
     });
 });
 
-// Set active navigation based on current page
+// Set active navigation based on current page and default language to Spanish
 document.addEventListener('DOMContentLoaded', () => {
     const currentPage = window.location.pathname.split('/').pop() || 'index.html';
     const navItems = document.querySelectorAll('nav ul li a');
@@ -233,4 +233,7 @@ document.addEventListener('DOMContentLoaded', () => {
             link.classList.add('active');
         }
     });
+
+    // Idioma por defecto: español
+    updateLanguage('es');
 });
