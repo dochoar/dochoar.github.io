@@ -79,6 +79,40 @@ const translations = {
         blog_3_desc: "How competitive chess influences problem-solving in computational chemistry.",
         footer_credits: "Design by Antigravity.",
         lang_btn: "ESPAÑOL",
+
+        // Home (index)
+        home_kicker: "Computational science · Software · Teaching",
+        home_badge_1: "Computational chemistry",
+        home_badge_2: "Software engineering",
+        home_badge_3: "Data Science",
+        home_cta_career: "View Career",
+        home_exp_kicker_1: "Teaching",
+        home_exp_title_1: "University instructor",
+        home_exp_desc_1: "Physical chemistry, mathematics and scientific programming (2015–2022) with a hands-on approach.",
+        home_exp_kicker_2: "Research",
+        home_exp_title_2: "Ab initio modeling & thermochemistry",
+        home_exp_desc_2: "Potential energy surfaces, fragmentation dynamics, and experimental validation.",
+        home_exp_kicker_3: "Software",
+        home_exp_title_3: "Automation & tooling",
+        home_exp_desc_3: "Python, Bash, Node.js and reproducible pipelines for research and web products.",
+        home_focus_title: "What I work on",
+        home_focus_subtitle: "Three lanes that connect science and software in a practical way.",
+        home_focus_1_title: "Methods & models",
+        home_focus_1_desc: "Ab initio calculations, thermochemical analysis, and computational strategy design.",
+        home_focus_2_title: "HPC & reproducibility",
+        home_focus_2_desc: "Automation, controlled environments, and workflows you can run and audit.",
+        home_focus_3_title: "Product & outreach",
+        home_focus_3_desc: "Web tools, practical engineering, and educational content with impact.",
+        home_links_title: "Quick links",
+        home_links_subtitle: "The fastest way to understand my work.",
+        home_links_1_title: "Publications",
+        home_links_1_desc: "Indexed papers and DOI links.",
+        home_links_2_title: "Career",
+        home_links_2_desc: "Collaborations, research stays and distinctions.",
+        home_links_3_title: "Research log",
+        home_links_3_desc: "Notes and research updates.",
+        home_links_4_title: "GitHub",
+        home_links_4_desc: "Code, scripts and projects.",
     },
     es: {
         nav_home: "Inicio",
@@ -159,6 +193,40 @@ const translations = {
         blog_3_desc: "Cómo el ajedrez competitivo influye en la resolución de problemas en química computacional.",
         footer_credits: "Diseño por Antigravity.",
         lang_btn: "ENGLISH",
+
+        // Home (index)
+        home_kicker: "Ciencia computacional · Software · Docencia",
+        home_badge_1: "Química computacional",
+        home_badge_2: "Ingeniería de software",
+        home_badge_3: "Ciencia de datos",
+        home_cta_career: "Ver Trayectoria",
+        home_exp_kicker_1: "Docencia",
+        home_exp_title_1: "Profesor universitario",
+        home_exp_desc_1: "Físico-química, matemáticas y programación científica (2015–2022) con enfoque práctico.",
+        home_exp_kicker_2: "Investigación",
+        home_exp_title_2: "Modelado ab initio y termoquímica",
+        home_exp_desc_2: "Superficies de energía potencial, dinámica de fragmentación y validación experimental.",
+        home_exp_kicker_3: "Software",
+        home_exp_title_3: "Automatización y herramientas",
+        home_exp_desc_3: "Python, Bash, Node.js y pipelines reproducibles para investigación y productos web.",
+        home_focus_title: "En qué trabajo",
+        home_focus_subtitle: "Tres frentes que conectan ciencia y software de forma directa.",
+        home_focus_1_title: "Métodos y modelos",
+        home_focus_1_desc: "Cálculos ab initio, análisis termoquímico y diseño de estrategias computacionales.",
+        home_focus_2_title: "HPC y reproducibilidad",
+        home_focus_2_desc: "Automatización, entornos controlados y workflows que se pueden correr y auditar.",
+        home_focus_3_title: "Producto y divulgación",
+        home_focus_3_desc: "Herramientas web, ingeniería práctica y contenido educativo con impacto.",
+        home_links_title: "Accesos rápidos",
+        home_links_subtitle: "Lo más útil para entender mi trabajo en 60 segundos.",
+        home_links_1_title: "Publicaciones",
+        home_links_1_desc: "Artículos indexados y enlaces DOI.",
+        home_links_2_title: "Trayectoria",
+        home_links_2_desc: "Colaboraciones, estancias y distinciones.",
+        home_links_3_title: "Bitácora",
+        home_links_3_desc: "Notas y actualizaciones de investigación.",
+        home_links_4_title: "GitHub",
+        home_links_4_desc: "Código, scripts y proyectos.",
     }
 };
 
@@ -195,7 +263,15 @@ function updateLanguage(lang) {
 // Language Toggle Event
 const langBtn = document.getElementById('lang-toggle');
 if (langBtn) {
-    langBtn.addEventListener('click', () => {
+    langBtn.addEventListener('click', (e) => {
+        const target = e.target;
+        const requested = target && target.dataset ? target.dataset.lang : null;
+        if (requested === 'es' || requested === 'en') {
+            updateLanguage(requested);
+            return;
+        }
+
+        // fallback: alternar si se hace clic fuera de las opciones
         const newLang = currentLang === 'en' ? 'es' : 'en';
         updateLanguage(newLang);
     });
