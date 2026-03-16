@@ -164,6 +164,18 @@ const translations = {
 
 let currentLang = 'es';
 
+function renderLangButton(lang) {
+    const btn = document.getElementById('lang-toggle');
+    if (!btn) return;
+
+    // Orden fijo: Español primero, luego Inglés
+    btn.innerHTML = `
+        <span class="lang-opt ${lang === 'es' ? 'active' : ''}" data-lang="es">ESPAÑOL</span>
+        <span class="lang-sep">/</span>
+        <span class="lang-opt ${lang === 'en' ? 'active' : ''}" data-lang="en">ENGLISH</span>
+    `.trim();
+}
+
 function updateLanguage(lang) {
     currentLang = lang;
     document.querySelectorAll('[data-i18n]').forEach(element => {
@@ -173,9 +185,8 @@ function updateLanguage(lang) {
         }
     });
 
-    // Update button text
-    const btn = document.getElementById('lang-toggle');
-    if (btn) btn.innerText = translations[lang]['lang_btn'];
+    // Actualiza el botón de idioma (ES primero, EN segundo)
+    renderLangButton(lang);
 
     // Update html lang attribute
     document.documentElement.lang = lang;

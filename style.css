@@ -117,6 +117,21 @@ header {
     transition: var(--transition-speed);
 }
 
+.lang-btn .lang-opt {
+    color: var(--text-secondary);
+    font-weight: 600;
+}
+
+.lang-btn .lang-opt.active {
+    color: var(--text-primary);
+}
+
+.lang-btn .lang-sep {
+    display: inline-block;
+    margin: 0 0.35rem;
+    color: rgba(255, 255, 255, 0.25);
+}
+
 .lang-btn:hover {
     border-color: var(--accent-color);
     color: var(--accent-color);
